@@ -13,7 +13,7 @@ const createPost = function () {
     const post = document.createElement('h1')
     const hr = document.createElement('hr')
     post.innerText = text
-    body.append(post)
+    body.append(post,hr)
     input.value = ''
 }
 btn.addEventListener('click', createPost)
