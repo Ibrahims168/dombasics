@@ -11,7 +11,7 @@ const btn = document.getElementById('myBtn')
 const createPost = function () {
     const text = input.value
     const post = document.createElement('h1')
-    const hr = document.createElement('h2')
+    const hr = document.createElement('hr')
     post.innerText = text
     body.append(post)
     input.value = ''
