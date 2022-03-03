@@ -8,12 +8,22 @@ const input = document.querySelector('#myInput')
 const btn = document.getElementById('myBtn')
 
 
-btn.addEventListener('click', function () {
+const createPost = function () {
     const text = input.value
     const post = document.createElement('h1')
+    const hr = document.createElement('h2')
     post.innerText = text
     body.append(post)
+    input.value = ''
+}
+btn.addEventListener('click', createPost)
+
+input.addEventListener('keydown', function (event) {
+    if (event.key == 'Enter') {
+        createPost()
+    }
 })
+
 
 
 
